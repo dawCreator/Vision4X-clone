@@ -4,7 +4,7 @@ A simple structure-first web UI scaffold.
 
 ## Fundamental structure
 
-- `index.html` — the only file that needs to be served.
+- `index.html` — root HTML
 - `styles.css` — root stylesheet loaded by `index.html`.
 - `app.js` — root bootstrap script loaded by `index.html`.
 - `src/` — component folder tree containing `*.js`, `*.css`, and `*.html` files.
@@ -24,8 +24,7 @@ Run:
 ```bash
 node build.js
 ```
-
-Then open or serve `index.html`.
+…or just build inside VSC. Then open or serve `index.html`.
 
 ## Important
 

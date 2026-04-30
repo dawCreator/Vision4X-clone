@@ -1,0 +1,54 @@
+image-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 220ms ease, visibility 220ms ease;
+}
+
+image-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: #111;
+  background-image: url('REFERENCE.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  opacity: var(--image-opacity, 0.5);
+  transition: none;
+}
+
+.image-overlay__bar {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  height: 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.image-overlay__bar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-overlay__fill {
+  height: 100%;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.92);
+}

@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+  
   <title>Vision4X Clone</title>
 
   <!-- ROOT CSS -->
@@ -10,40 +12,67 @@
 
   <!-- GENERATED CSS START -->
 <!-- // CSS -->
-  <link rel="stylesheet" href="src/circle/circle.css">
-  <link rel="stylesheet" href="src/container/container.css">
-  <link rel="stylesheet" href="src/custom-box/custom-box.css">
-  <link rel="stylesheet" href="src/triangle/triangle.css">
+  <link rel="stylesheet" href="src/button-base/button-base.css">
+  <link rel="stylesheet" href="src/button-base/scale-button/scale-button.css">
+  <link rel="stylesheet" href="src/canvas-base/axis-base/frequency-axis/frequency-axis.css">
+  <link rel="stylesheet" href="src/canvas-base/axis-base/loudness-axis/loudness-axis.css">
+  <link rel="stylesheet" href="src/canvas-base/axis-base/time-axis/time-axis.css">
+  <link rel="stylesheet" href="src/canvas-base/canvas-base.css">
+  <link rel="stylesheet" href="src/canvas-base/view-base/oscilloscope-view/oscilloscope-view.css">
+  <link rel="stylesheet" href="src/canvas-base/view-base/spectogram-view/spectogram-view.css">
+  <link rel="stylesheet" href="src/canvas-base/view-base/spectrum-view/spectrum-view.css">
+  <link rel="stylesheet" href="src/canvas-base/view-base/stereo-view/stereo-view.css">
+  <link rel="stylesheet" href="src/image-overlay/image-overlay.css">
+  <link rel="stylesheet" href="src/main-window/main-window.css">
 <!-- GENERATED CSS END -->
 
 </head>
 <body>
   <!-- GENERATED HTML BODY START -->
 <!-- // HTML -->
-  <!-- src/container/container.html -->
-<template id="demo-container-template">
-  <div class="demo-container">
-    <div class="demo-item item-top">
-      <div class="circle-component">
-        <div class="circle-shape"></div>
-        <div class="circle-label">Blue Circle</div>
-      </div>
+  <!-- src/button-base/button-base.html -->
+
+  <!-- src/canvas-base/axis-base/frequency-axis/frequency-axis.html -->
+
+  <!-- src/canvas-base/axis-base/loudness-axis/loudness-axis.html -->
+
+  <!-- src/canvas-base/axis-base/time-axis/time-axis.html -->
+
+  <!-- src/canvas-base/view-base/oscilloscope-view/oscilloscope-view.html -->
+
+  <!-- src/canvas-base/view-base/spectogram-view/spectogram-view.html -->
+
+  <!-- src/canvas-base/view-base/spectrum-view/spectrum-view.html -->
+
+  <!-- src/canvas-base/view-base/stereo-view/stereo-view.html -->
+
+  <!-- src/image-overlay/image-overlay.html -->
+<template id="image-overlay-template">
+    <div class="image-overlay">
+        <div class="image-overlay__backdrop"></div>
+        <div class="image-overlay__bar">
+            <div class="image-overlay__fill"></div>
+        </div>
     </div>
-    <div class="demo-item item-bottom-right">
-      <div class="triangle-component">
-        <div class="triangle-shape"></div>
-        <div class="triangle-label">Red Triangle</div>
-      </div>
-    </div>
-    <div class="demo-item item-bottom-left">
-      <div class="custom-box-wrapper">
-        <colored-box></colored-box>
-      </div>
-    </div>
-  </div>
 </template>
 
-<demo-container></demo-container>
+<image-overlay></image-overlay>
+  <!-- src/main-window/main-window.html -->
+<template id="main-window-template">
+  <spectogram-view></spectogram-view>
+  <frequency-axis></frequency-axis>
+  <spectrum-view></spectrum-view>
+
+  <time-axis></time-axis>
+  <scale-button></scale-button>
+  <loudness-axis></loudness-axis>
+
+  <oscilloscope-view></oscilloscope-view>
+  <loudness-axis></loudness-axis>
+  <stereo-view></stereo-view>
+</template>
+
+<main-window></main-window>
 <!-- GENERATED HTML BODY END -->
 
   <!-- ROOT JS -->
@@ -51,10 +80,20 @@
 
   <!-- GENERATED JS START -->
 <!-- // JS -->
-  <script type="module" src="src/circle/circle.js"></script>
-  <script type="module" src="src/container/container.js"></script>
-  <script type="module" src="src/custom-box/custom-box.js"></script>
-  <script type="module" src="src/triangle/triangle.js"></script>
+  <script type="module" src="src/button-base/button-base.js"></script>
+  <script type="module" src="src/button-base/scale-button/scale-button.js"></script>
+  <script type="module" src="src/canvas-base/axis-base/axis-base.js"></script>
+  <script type="module" src="src/canvas-base/axis-base/frequency-axis/frequency-axis.js"></script>
+  <script type="module" src="src/canvas-base/axis-base/loudness-axis/loudness-axis.js"></script>
+  <script type="module" src="src/canvas-base/axis-base/time-axis/time-axis.js"></script>
+  <script type="module" src="src/canvas-base/canvas-base.js"></script>
+  <script type="module" src="src/canvas-base/view-base/oscilloscope-view/oscilloscope-view.js"></script>
+  <script type="module" src="src/canvas-base/view-base/spectogram-view/spectogram-view.js"></script>
+  <script type="module" src="src/canvas-base/view-base/spectrum-view/spectrum-view.js"></script>
+  <script type="module" src="src/canvas-base/view-base/stereo-view/stereo-view.js"></script>
+  <script type="module" src="src/canvas-base/view-base/view-base.js"></script>
+  <script type="module" src="src/image-overlay/image-overlay.js"></script>
+  <script type="module" src="src/main-window/main-window.js"></script>
 <!-- GENERATED JS END -->
 </body>
 </html>

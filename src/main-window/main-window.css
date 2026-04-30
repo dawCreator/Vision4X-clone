@@ -1,0 +1,17 @@
+main-window {
+  --AXIS_SIZE: 25px;
+
+  --x: 0.5;
+  --y: 0.5;
+
+  background-color: blue;
+  height: 100%;
+  display: grid;
+
+  grid-template-columns: minmax(0, calc(var(--x) * (100% - var(--AXIS_SIZE)))) var(--AXIS_SIZE) minmax(0, 1fr);
+  grid-template-rows: minmax(0, calc(var(--y) * (100% - var(--AXIS_SIZE)))) var(--AXIS_SIZE) minmax(0, 1fr);
+  grid-template-areas:
+    "spectrogram  frequency-axis  spectrum"
+    "time-axis    scaler          time-axis"
+    "oscilloscope loudness-axis   stereoscope";
+}
