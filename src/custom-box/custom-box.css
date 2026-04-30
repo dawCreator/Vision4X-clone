@@ -1,0 +1,31 @@
+.custom-box-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+colored-box {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  background: #a855f7;
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+  line-height: 120px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+colored-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(168, 85, 247, 0.25);
+}
+
+colored-box.active {
+  background: #f59e0b;
+  box-shadow: 0 18px 40px rgba(245, 158, 11, 0.25);
+}
