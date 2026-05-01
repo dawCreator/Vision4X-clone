@@ -6,6 +6,13 @@ export class ViewBase extends CanvasBase {
     this.data = [];
   }
 
+  connectedCallback() {
+    if (this._initialized) return;
+    this.classList.add('view-base');
+
+    super.connectedCallback();
+  }
+
   setData(data) {
     this.data = data;
     this.render();

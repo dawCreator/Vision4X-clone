@@ -6,10 +6,14 @@ html, body {
 }
 
 body {
-  background-color: black;
+  background-color: var(--BORDER_COLOR);
+  
   min-height: 100vh;
   min-width: 100vw;
   box-sizing: border-box;
+
+  padding: 10px;
+  overflow: hidden;
 }
 
 * {
@@ -17,4 +21,12 @@ body {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none;     /* old Edge */
   touch-action: none;
+}
+
+:root {
+  /* for whatever reason, BACKGROUND_COLOR can't be rgb(0, 0, 0) or the axis will shrink during movement */
+  --BACKGROUND_COLOR: rgb(9, 9, 9); 
+  --BORDER_COLOR: rgb(50, 50, 50);
+  --AXIS_COLOR: var(--BORDER_COLOR);
+  --TEXT_COLOR: rgb(200, 200, 200);
 }

@@ -11,7 +11,7 @@ class OscilloscopeView extends ViewBase {
     const w = this.canvas.width;
     const h = this.canvas.height;
 
-    this.clear('#1a1a1a');
+    this.clear();
 
     if (this.data.length === 0) return;
 

@@ -20,7 +20,7 @@ class StereoView extends ViewBase {
     const h = this.canvas.height;
     const midH = h / 2;
 
-    this.clear('#1a1a1a');
+    this.clear();
 
     this.drawChannel(this.dataLeft, 0, midH, '#ff6600');
     this.drawChannel(this.dataRight, midH, h, '#00ff99');

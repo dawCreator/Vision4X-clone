@@ -16,7 +16,7 @@ class SpectrogramView extends ViewBase {
   }
 
   render() {
-    this.clear('#c70a0a');
+    this.clear();
     
     if (!this.ctx || this.history.length === 0) return;
 

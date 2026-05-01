@@ -1,0 +1,4 @@
+.axis-base {
+  background-color: var(--AXIS_COLOR);
+  z-index: 1;
+}
